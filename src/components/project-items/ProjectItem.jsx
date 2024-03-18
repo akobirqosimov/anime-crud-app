@@ -1,5 +1,6 @@
 import axios from "axios";
 import Styles from "./project-item.module.css";
+import { Link } from "react-router-dom";
 
 function ProjectItem({ _id, image, title, description, price }) {
   const deleteProduct = async (id) => {
@@ -21,8 +22,8 @@ function ProjectItem({ _id, image, title, description, price }) {
         <span>${price}</span>
       </div>
       <div className={Styles.projectCardBtns}>
-        <button>Detail</button>
-        <button>Edit</button>
+        <Link to={`/detail/${_id}`}>Detail</Link>
+        <Link to={`/edit/${_id}`}>Edit</Link>
         <button onClick={() => deleteProduct(_id)}>Delete</button>
       </div>
     </div>

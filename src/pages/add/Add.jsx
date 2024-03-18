@@ -35,37 +35,39 @@ function Add() {
   };
 
   return (
-    <div className="container">
-      <h1>Add Product</h1>
-      <form onSubmit={handleSubmit}>
-        <span>{error ? "Iltimos Barcha Bo'limlarni To'ldiring" : null}</span>
-        <Input
-          label={"Image Url"}
-          state={image1}
-          setState={setImage1}
-          error={error}
-        />
-        <Input
-          label={"Product Title"}
-          state={title1}
-          setState={setTitle1}
-          error={error}
-        />
-        <Input
-          label={"Product Description"}
-          state={description1}
-          setState={setDescription1}
-          error={error}
-        />
-        <Input
-          label={"Product Price"}
-          state={price1}
-          setState={setPrice1}
-          error={error}
-        />
-        <button>Create Product</button>
-      </form>
-    </div>
+    <section className={Styles.add}>
+      <div className="container">
+        <h1>Add Product</h1>
+        <form onSubmit={handleSubmit}>
+          <span>{error ? "Iltimos Barcha Bo'limlarni To'ldiring" : null}</span>
+          <Input
+            label={"Image Url"}
+            state={image1}
+            setState={setImage1}
+            error={error}
+          />
+          <Input
+            label={"Product Title"}
+            state={title1}
+            setState={setTitle1}
+            error={error}
+          />
+          <Input
+            label={"Product Description"}
+            state={description1}
+            setState={setDescription1}
+            error={error}
+          />
+          <Input
+            label={"Product Price"}
+            state={price1}
+            setState={setPrice1}
+            error={error}
+          />
+          <button>Create Product</button>
+        </form>
+      </div>
+    </section>
   );
 }
 
